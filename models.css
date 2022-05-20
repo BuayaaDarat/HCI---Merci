@@ -1,0 +1,487 @@
+@font-face {
+    font-family: 'Monument';
+    src: url(Fonts/Monument/MonumentExtended-Ultrabold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Jakarta Regular';
+    src: url(Fonts/Jakarta/PlusJakartaSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Jakarta Bold';
+    src: url(Fonts/Jakarta/PlusJakartaSans-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Jakarta Semi';
+    src: url(Fonts/Jakarta/PlusJakartaSans-Bold.ttf);
+}
+
+@keyframes slidescroll {
+    0% {
+        transform: translateX(0, 0, 0);
+      }
+      100% {
+        transform: translateX(calc(-250px*9.85));
+      }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none;
+        background-color: transparent;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background: black;
+    font-family: 'Jakarta Regular';
+    color: white;
+}
+
+.models-navigation{
+    position: fixed;
+    width: 70%;
+    width: 350px;
+    height: 200px;
+    left: 50%;
+    top: 105%;
+    transform: translate(-50%, -50%);
+}
+
+.models-navbar{
+    background: black;
+    box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    height: 25%;
+    border-radius: 100px;
+}
+
+.models-navbar a{
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 4%;
+    width: 100%;
+}
+
+.models-navbar a.active{
+    background-color: white;
+    color: black;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    transition: top 0.3s;
+}
+
+.navbar{
+    background: rgba(0, 0, 0, 0.0);
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.image-logo img{
+    width: 80%;
+    object-fit: cover;
+}
+
+.small-menu{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    display: flex;
+    gap: 98px;
+    align-items: center;
+}
+
+.shop-button{
+    color: white;
+    text-decoration: none;
+}
+
+.shop-button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.dropdown button{
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    display: flex;
+    gap: 5px;
+}
+
+.dropdown button:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.models-content {
+    background-color: #000000;
+    display: none;
+    position: absolute;
+    min-width: 1px;
+    z-index: 1;
+    animation: fadeIn 0.5s;
+}
+
+.models-content a{
+    display: block;
+    padding: 12px 16px;
+    float: none;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+}
+
+.models-content a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    animation: fadeIn 0.5s;
+}
+
+.dropdown:hover .models-content{
+    display: block;
+    background-color: black;
+    cursor: pointer;
+}
+
+.s-class{
+    height: 100vh;
+    background: linear-gradient(186.47deg, #000000 -116.97%, rgba(0, 0, 0, 0) 119.1%), url(./Pictures/sclass4k\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center  center;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.sclass-content{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    padding-top: 9%;
+
+    /* border: 1px solid red; */
+}
+
+.class-header h1{
+    font-family: 'Monument';
+    font-size: 5.18vh;
+    width: 100%;
+    color: white;
+    letter-spacing: 0.06em;
+    padding-top: 15%;
+    /* border: 1px solid red; */
+}
+
+.sclass-details{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.3);
+    padding: 3%;
+    padding-left: 5%;
+    width: 92%;
+}
+
+.sclass-details h2{
+    font-family: 'Jakarta Bold';
+    letter-spacing: 0.06em;
+    color: white;
+    padding-bottom: 2%;
+    font-size: 3.5vh;
+}
+
+.sclass-details p{
+    line-height: 250.02%;
+    font-size: 1.7vh;
+}
+
+.g-class{
+    height: 100vh;
+    background: linear-gradient(186.47deg, #000000 -116.97%, rgba(0, 0, 0, 0) 119.1%), url(./Pictures/brabusGclass.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center  center;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.gclass-details{
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.3);
+    padding: 3%;
+    padding-left: 5%;
+    width: 100%;
+}
+
+.gclass-details h2{
+    font-family: 'Jakarta Bold';
+    letter-spacing: 0.06em;
+    color: white;
+    padding-bottom: 2%;
+    font-size: 3.5vh;
+}
+
+.gclass-details p{
+    line-height: 250.02%;
+    font-size: 1.7vh;
+}
+
+.separator{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gclass-all{
+    font-family: 'Jakarta Bold';
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.3);
+    padding-right: 3%;
+    padding-left: 0.1%;
+    display: none;
+}
+
+.gclass-all h2{
+    padding: 5%;
+}
+
+.amg{
+    height: 100vh;
+    background: linear-gradient(186.47deg, #000000 -116.97%, rgba(0, 0, 0, 0) 119.1%), url(./Pictures/amg4k.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center  center;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.amg-all{
+    font-family: 'Jakarta Bold';
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 38px rgba(0, 0, 0, 0.3);
+    padding-right: 3%;
+    padding-left: 3%;
+    display: none;
+}
+
+.amg-all h2{
+    padding: 5%;
+}
+
+
+.footer{
+    font-family: 'Jakarta Regular';
+    color: white;
+    display: flex;
+    height: 673px;
+    background-color: black;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.footer-header{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 3% 5%;
+    align-items: center;
+    size: 20px;
+}
+
+.white-line1{
+    padding: 5px 0 34px 0;
+}
+
+.footer-mid{
+    display: flex;
+    padding: 1% 5%;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+}
+
+.form{
+    width: 50%;
+}
+
+.form p{
+    font-family: 'Jakarta Semi';
+}
+
+.form input{
+    font-family: 'Jakarta Regular';
+    width: 50%;
+    height: 35px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
+
+.mid-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.mid-right p{
+    font-family: 'Jakarta Semi';
+}
+
+.mid-right a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.41);
+    padding-top: 30%;
+}
+
+.mid-right a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.white-line2{
+    padding: 34px 0 5px 0;
+}
+
+.footer-foot{
+    display: flex;
+    padding: 1% 5%;
+}
+
+.models-footer{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.typography, .thankyou{
+    margin: 25px 5px 10px 10px;
+    font-family: 'Jakarta Bold';
+    display: flex;
+    font-size: 4vh;
+    width: 15ch;
+    animation: typing 6s steps(25) infinite, blink .5s step-end infinite
+    alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+}
+
+@keyframes typing {
+    from{
+      width: 0
+    }
+    50%, 100%{
+        width: 13.3ch;
+    }
+}
+
+@keyframes blink {
+    50%{
+      border-color: transparent
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .models-navbar a{
+        display: inline-block;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        padding: 2.5%;
+        width: 100%;
+    }
+    .models-navigation{
+        position: fixed;
+        width: 70%;
+        width: 450px;
+        height: 200px;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+    }
+    .sclass-details{
+        width: 40%;
+    }
+    .class-header h1{
+        padding: 0;
+    }
+    .gclass-all{
+        display: block;
+    }
+    .gclass-details{
+        width: 40%;
+    }
+    .amg-all{
+        display: block;
+    }
+    .typography{
+        font-size: 10vh;
+        margin: 100px 50px 10px 100px;
+    }
+}

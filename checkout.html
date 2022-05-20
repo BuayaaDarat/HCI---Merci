@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./checkout.css">
+</head>
+<body>
+    <div class="header" id="nav-bar">
+        <nav class="navbar">
+            <a href="./index.html" class="image-logo">
+                <img src="./Pictures/Navbar.png" alt="logo-merci">
+            </a>
+            <div class="small-menu">
+                <a href="./shop.html" class="shop-button">Shop</a>
+                <div class="dropdown">
+                    <button class="models-drop">
+                        Models
+                        <img src="./Pictures/arrow-down.svg" alt="">
+                    </button>
+                    <div class="models-content">
+                        <a href="./models.html#sclass" class="models-button">S-Class</a>
+                        <a href="./models.html#gclass" class="models-button">G-Class</a>
+                        <a href="./models.html#amggt" class="models-button">AMG-GT</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <section class="checkout">
+        <div class="form">
+            <h1>Checkout</h1>
+
+            <div class="interior">
+                <h1>Custom Your Vehicle</h1>
+                <p>Paint</p>
+                <div class="car-color">
+                    <button class="black"></button>
+                    <button class="white"></button>
+                    <button class="gray"></button>
+                    <button class="yellow"></button>
+                    <button class="red"></button>
+                </div>
+            </div>
+
+            <form action="" class="form-section">
+                <h1>Shipping Details</h1>
+                <div class="personal2">
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email" placeholder="Email Address..">
+                </div>
+
+                <div class="personal">
+                    <div class="name">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="full-name" placeholder="Insert your full name...">
+                    </div>
+                    <div class="name">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" name="phone-number" placeholder="Insert your phone number...">
+                    </div>
+                </div>
+
+                <div class="personal2">
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="indonesia">Indonesia</option>
+                        <option value="usa">USA</option>
+                        <option value="australia">Australia</option>
+                        <option value="France">France</option>
+                    </select>
+                </div>
+
+                <div class="personal">
+                    <div class="name">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="Insert your city...">
+                    </div>
+                    <div class="name">
+                        <label for="post">Postal Code</label>
+                        <input type="text" id="post" name="postal-code" placeholder="Insert your post code...">
+                    </div>
+                </div>
+
+                <div class="personal2">
+                    <label for="address">Shipping Address</label>
+                    <input type="text" id="address" name="Shipping" placeholder="Insert your street address..">
+                </div>
+
+                <h2>Rp 870.000.000,00</h2>
+
+                <label class="check">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    I agree to the terms of service, including the User Agreement by Merci.
+                </label>
+                <a href="./splash.html">Place Order</a>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
