@@ -14,6 +14,7 @@ Project ini ditujukan untuk projek individu akhir mata kuliah Human Computer Int
 Semua foto yang ada di website ini didapat dari internet, semua lisensi dipegang oleh pemilik foto.
 
 **Link Refrensi Foto:**
+
 Logo:
 * https://www.pinclipart.com/downpngs/iThhJJx_mercedes-benz-logo-transparent-mercedes-benz-logo-clip/
 
